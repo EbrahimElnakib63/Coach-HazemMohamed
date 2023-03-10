@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/x-icon" href="images/basty/4.HEIC">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+        <link rel="stylesheet" href="css/client1.css">
+
+        <title>Gallery</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="gallery">
+                <div class="img"><img src="images/basty/1.jpg" alt="basty"></div>
+                <div class="img"><img src="images/basty/2.jpg" alt="basty"></div>
+                <div class="img"><img src="images/basty/3.jpg" alt="basty"></div>
+                <div class="img"><img src="images/basty/4.HEIC" alt="basty"></div>
+                <div class="img"><img src="images/basty/5.HEIC" alt="basty"></div>
+                <div class="img"><img src="images/basty/6.HEIC" alt="basty"></div>
+            </div>
+            <div class="pop-image">
+                <span> &times; </span>
+                <img src="images/basty/1.jpg" alt="basty">
+            </div>
+        </div>
+
+    <script>
+        document.querySelectorAll('.img img').forEach(image =>{
+            image.onclick = ()=> {
+                document.querySelector('.pop-image').style.display = 'block';
+                document.querySelector('.pop-image img').src = image.getAttribute('src');
+            }
+
+        });
+        document.querySelector('.pop-image span').onclick = ()=>{
+            document.querySelector('.pop-image').style.display = 'none';
+
+        }
+        ;
+
+    </script>
+    </body>
+</html>
